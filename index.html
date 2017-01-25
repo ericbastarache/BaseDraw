@@ -36,22 +36,32 @@
             <li><button id="orange-button" class="btn btn-color" value="#FF9900"></button></li>
             <li><button id="gray-button" class="btn btn-color" value="#C0C0C0"></button></li>
             <li><button id="white-button" class="btn btn-color" value="#FFFFFF"></button></li>
-            <li><input type="color" id="colorChoice"/></li>
+
             <li><button id="clear-button" class="btn btn-danger">Clear Canvas</button></li>
           </ul>
-          <h3 class="text-center">Choose a Color and get Drawing!</h3>
-          <ol>
-            <li>Choose a color by clicking on one of the colors</li>
-            <li>Get painting!</li>
-          </ol>
-          <p>Want even more colors? Click the big square button for more options!</p>
-          <div id="choice"></div>
+          <ul class="toolbox-items">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
         </div>
         <div class="col-md-8">
           <canvas id="drawing-board"></canvas>
         </div>
         <div class="col-md-2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>Choose a Color and get Drawing!</h3>
+          <ol>
+            <li>Choose a color by clicking on one of the colors</li>
+            <li>Get painting!</li>
+          </ol>
+          <p>Want even more options? Click this button <input type="color" id="colorChoice"/> for more options!</p>
+          <div id="choice"></div><span>Currently Selected Color</span>
         </div>
       </div>
     </div>
