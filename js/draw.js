@@ -4,7 +4,7 @@ canvas.height = 850;
 var ctx = canvas.getContext('2d');
 
 window.onload = function () {
-  
+
   //Apply the background color to the buttons
   for(var i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
     document.getElementsByClassName('btn-color')[i].style.background = document.getElementsByClassName('btn-color')[i].value;
@@ -30,3 +30,9 @@ function draw () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   ctx.fillRect(10,10,50,50);
 }
+
+(function clear () {
+  document.getElementById('clear-button').addEventListener('click', function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  });
+})();
