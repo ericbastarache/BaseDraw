@@ -9,6 +9,7 @@ window.onload = function () {
   for(var i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
     document.getElementsByClassName('btn-color')[i].style.background = document.getElementsByClassName('btn-color')[i].value;
   }
+  document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
   draw();
 }
 
@@ -18,6 +19,7 @@ var choiceButton = document.getElementById('colorChoice').addEventListener('clic
 
 var choiceButtonChange = document.getElementById('colorChoice').addEventListener('change', function () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
+  document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
   draw();
 });
 
