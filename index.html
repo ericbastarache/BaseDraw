@@ -22,11 +22,29 @@
       <div class="row">
         <h1 class="text-center">HTML CSS JavaScript Drawing App</h1>
         <div class="col-md-2">
-          <ul class="color-button-grid">
-            <li><button class="btn btn-color" value="#FF0000"></button></li>
-            <li><button class="btn btn-color" value="#00FF00"></button></li>
-            <li></li>
+          <ul class="color-button-list pull-right">
+            <li><button id="red-button" class="btn btn-color" value="#FF0000"></button></li>
+            <li><button id="green-button" class="btn btn-color" value="#00FF00"></button></li>
+            <li><button id="blue-button" class="btn btn-color" value="#0000FF"></button></li>
+            <li><button id="black-button" class="btn btn-color" value="#000000"></button></li>
+            <li><button id="navy-button" class="btn btn-color" value="#003366"></button></li>
+            <li><button id="dark-gray-button" class="btn btn-color" value="#666666"></button></li>
+            <li><button id="light-gray-button" class="btn btn-color" value="#CCCCCC"></button></li>
+            <li><button id="light-navy-button" class="btn btn-color" value="#336699"></button></li>
+            <li><button id="tangerine-button" class="btn btn-color" value="#FF6600"></button></li>
+            <li><button id="yellow-button" class="btn btn-color" value="#FFCC00"></button></li>
+            <li><button id="orange-button" class="btn btn-color" value="#FF9900"></button></li>
+            <li><button id="gray-button" class="btn btn-color" value="#C0C0C0"></button></li>
+            <li><button id="white-button" class="btn btn-color" value="#FFFFFF"></button></li>
+            <li><input type="color" id="colorChoice"/></li>
           </ul>
+          <h3 class="text-center">Choose a Color and get Drawing!</h3>
+          <ol>
+            <li>Choose a color by clicking on one of the colors</li>
+            <li>Get painting!</li>
+          </ol>
+          <p>Want even more colors? Click the big square button for more options!</p>
+          <div id="choice"></div>
         </div>
         <div class="col-md-8">
           <canvas id="drawing-board"></canvas>
