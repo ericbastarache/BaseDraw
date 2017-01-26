@@ -39,7 +39,7 @@ document.getElementById('clear-button').addEventListener('click', function () {
 document.getElementById('save-button').addEventListener('click', function () {
   var dl = canvas.toDataURL('image/png', 1.0);
   var dlElem = document.createElement("a");
-  dlElem.innerHTML = "Click to download your image";
+  dlElem.innerHTML = "Click here to download your image";
   dlElem.download = "image.png";
   dlElem.href = dl;
   document.getElementById('download').append(dlElem);
