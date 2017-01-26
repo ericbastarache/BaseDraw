@@ -15,7 +15,6 @@ window.onload = function () {
 }
 
 var choiceButton = document.getElementById('colorChoice').addEventListener('click', function () {
-  console.log(this.value);
   ctx.fillStyle = document.getElementById('colorChoice').value;
 });
 
