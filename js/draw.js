@@ -9,6 +9,7 @@ window.onload = function () {
   for(var i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
     document.getElementsByClassName('btn-color')[i].style.background = document.getElementsByClassName('btn-color')[i].value;
   }
+
   document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
   draw();
 }
@@ -17,20 +18,24 @@ var choiceButton = document.getElementById('colorChoice').addEventListener('clic
   ctx.fillStyle = document.getElementById('colorChoice').value;
 });
 
+document.getElementById('button-area').addEventListener('click', function(e) {
+  changeColor(e.target);
+});
+
 var choiceButtonChange = document.getElementById('colorChoice').addEventListener('change', function () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
   draw();
 });
 
-var redButton = document.getElementById('red-button').addEventListener('click', function () {
-  document.getElementById('red-button').style.background = document.getElementById('red-button').value;
-  ctx.fillStyle = document.getElementById('red-button').value;
-});
-
 function draw () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   ctx.fillRect(10,10,50,50);
+}
+
+function changeColor(elem) {
+  ctx.fillStyle = elem.value;
+  document.getElementById('choice').style.background = elem.value;
 }
 
 (function clear () {
