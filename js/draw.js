@@ -33,6 +33,7 @@ document.getElementById('toolbox').addEventListener('click', function (e) {
 
 document.getElementById('clear-button').addEventListener('click', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  document.getElementById('download').remove();
 });
 
 document.getElementById('save-button').addEventListener('click', function () {
