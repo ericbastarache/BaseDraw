@@ -44,7 +44,7 @@ document.getElementById('save-button').addEventListener('click', function (e) {
   dlElem.download = "image.png";
   dlElem.href = dl;
   document.getElementById('download').append(dlElem);
-  console.log(canvas.toDataURL('image/png', 1.0));
+  this.disabled = "disabled";
 });
 
 function draw () {
