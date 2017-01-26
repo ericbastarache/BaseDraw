@@ -26,7 +26,6 @@ document.getElementById('button-area').addEventListener('click', function(e) {
 document.getElementById('colorChoice').addEventListener('change', function () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
-  draw();
 });
 
 function draw () {
@@ -37,11 +36,13 @@ function draw () {
 function changeColor(elem) {
   if(elem.value === 0) {
     document.getElementById('colorChoice').value = "#000000";
+    document.getElementById('choice').style.background = "#000000";
   } else {
     ctx.fillStyle = elem.value;
     document.getElementById('colorChoice').value = elem.value;
     document.getElementById('choice').style.background = elem.value;
   }
+  draw();
 }
 
 (function clear () {
