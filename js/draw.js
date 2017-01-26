@@ -34,6 +34,7 @@ document.getElementById('toolbox').addEventListener('click', function (e) {
 document.getElementById('clear-button').addEventListener('click', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById('download').style = "display: none;";
+  document.getElementById('save-button').disabled = false;
 });
 
 document.getElementById('save-button').addEventListener('click', function (e) {
@@ -44,7 +45,7 @@ document.getElementById('save-button').addEventListener('click', function (e) {
   dlElem.download = "image.png";
   dlElem.href = dl;
   document.getElementById('download').append(dlElem);
-  this.disabled = "disabled";
+  this.disabled = true;
 });
 
 function draw () {
