@@ -35,9 +35,19 @@ document.getElementById('clear-button').addEventListener('click', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
+document.getElementById('save-button').addEventListener('click', function () {
+  var dl = canvas.toDataURL('image/png', 1.0);
+  var dlElem = document.createElement("a");
+  dlElem.innerHTML = "Click to download your image";
+  dlElem.download = "image.png";
+  dlElem.href = dl;
+  document.getElementById('download').append(dlElem);
+  console.log(canvas.toDataURL('image/png', 1.0));
+});
+
 function draw () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
-  //ctx.fillRect(10,10,50,50);
+
 
 }
 
@@ -50,11 +60,11 @@ function changeColor(elem) {
     document.getElementById('colorChoice').value = elem.value;
     document.getElementById('choice').style.background = elem.value;
   }
-  draw();
 }
 
 function drawShape(elem) {
   if(elem.id === "square") {
+    //getMouseCoords();
     ctx.fillRect(0,0,100,100);
   }
   if(elem.id === "circle") {
