@@ -15,6 +15,7 @@ window.onload = function () {
 }
 
 var choiceButton = document.getElementById('colorChoice').addEventListener('click', function () {
+  console.log(this.value);
   ctx.fillStyle = document.getElementById('colorChoice').value;
 });
 
@@ -22,7 +23,7 @@ document.getElementById('button-area').addEventListener('click', function(e) {
   changeColor(e.target);
 });
 
-var choiceButtonChange = document.getElementById('colorChoice').addEventListener('change', function () {
+document.getElementById('colorChoice').addEventListener('change', function () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
   draw();
@@ -34,8 +35,13 @@ function draw () {
 }
 
 function changeColor(elem) {
-  ctx.fillStyle = elem.value;
-  document.getElementById('choice').style.background = elem.value;
+  if(elem.value === 0) {
+    document.getElementById('colorChoice').value = "#000000";
+  } else {
+    ctx.fillStyle = elem.value;
+    document.getElementById('colorChoice').value = elem.value;
+    document.getElementById('choice').style.background = elem.value;
+  }
 }
 
 (function clear () {
