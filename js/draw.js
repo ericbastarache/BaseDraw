@@ -3,7 +3,7 @@ canvas.width = 1200;
 canvas.height = 850;
 var ctx = canvas.getContext('2d');
 
-window.onload = function () {
+window.onload = () => {
 
   //Apply the background color to the buttons
   for(var i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
@@ -48,13 +48,13 @@ document.getElementById('save-button').addEventListener('click', function (e) {
   this.disabled = true;
 });
 
-function draw () {
+var draw = () => {
   ctx.fillStyle = document.getElementById('colorChoice').value;
 
 
 }
 
-function changeColor(elem) {
+var changeColor = (elem) => {
   if(elem.value === 0) {
     document.getElementById('colorChoice').value = "#000000";
     document.getElementById('choice').style.background = "#000000";
@@ -65,7 +65,7 @@ function changeColor(elem) {
   }
 }
 
-function drawShape(elem) {
+var drawShape = (elem) => {
   if(elem.id === "square") {
     //getMouseCoords();
     ctx.fillRect(0,0,100,100);
