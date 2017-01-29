@@ -44,7 +44,11 @@ document.getElementById('save-button').addEventListener('click', function (e) {
   dlElem.innerHTML = "Click here to download your image";
   dlElem.download = "image.png";
   dlElem.href = dl;
-  document.getElementById('download').append(dlElem);
+  if(document.getElementById('download').hasChildNodes()) {
+    this.disabled = true;
+  } else {
+    document.getElementById('download').append(dlElem);
+  }
   this.disabled = true;
 });
 
