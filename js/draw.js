@@ -94,7 +94,10 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    ctx.fillRect(30,30,100,100);
+    var circle = new Path2D();
+    circle.moveTo(125, 35);
+    circle.arc(100, 35, 25, 0, 2 * Math.PI);
+    ctx.fill(circle);
   }
   if(elem.id === "heart") {
     if(document.getElementById('brush-tool').style = "display: block") {
@@ -131,6 +134,6 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    
+
   }
 }
