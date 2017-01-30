@@ -105,4 +105,9 @@ var drawShape = (elem) => {
   if(elem.id === "star") {
     ctx.fillRect(120,120,100,100);
   }
+  if(elem.id === "pencil") {
+    if(document.getElementById('brush-tool').style = "display: none") {
+      document.getElementById('brush-tool').style = "display: block";
+    }
+  }
 }
