@@ -3,6 +3,8 @@ canvas.width = 1200;
 canvas.height = 850;
 let ctx = canvas.getContext('2d');
 
+var dl, dlElem;
+
 window.onload = () => {
 
   //Apply the background color to the buttons
@@ -40,8 +42,8 @@ document.getElementById('clear-button').addEventListener('click', () => {
 
 document.getElementById('save-button').addEventListener('click', (e) => {
   document.getElementById('download').style = "display: block;";
-  let dl = canvas.toDataURL('image/png', 1.0);
-  let dlElem = document.createElement("a");
+  dl = canvas.toDataURL('image/png', 1.0);
+  dlElem = document.createElement("a");
   dlElem.innerHTML = "Click here to download your image";
   dlElem.download = "image.png";
   dlElem.href = dl;
