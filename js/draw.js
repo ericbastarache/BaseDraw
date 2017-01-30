@@ -14,7 +14,7 @@ window.onload = () => {
   draw();
 }
 
-var choiceButton = document.getElementById('colorChoice').addEventListener('click', function () {
+document.getElementById('colorChoice').addEventListener('click', function () {
   ctx.fillStyle = document.getElementById('colorChoice').value;
 });
 
