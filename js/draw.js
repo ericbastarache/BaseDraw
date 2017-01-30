@@ -71,10 +71,15 @@ var changeColor = (elem) => {
 
 var drawShape = (elem) => {
   if(elem.id === "square") {
-    //getMouseCoords();
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.fillRect(0,0,100,100);
   }
   if(elem.id === "callout") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);
@@ -86,9 +91,15 @@ var drawShape = (elem) => {
     ctx.stroke();
   }
   if(elem.id === "circle") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.fillRect(30,30,100,100);
   }
   if(elem.id === "heart") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.beginPath();
     ctx.moveTo(75, 40);
     ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
@@ -103,6 +114,9 @@ var drawShape = (elem) => {
     ctx.fillRect(90,90,100,100);
   }
   if(elem.id === "star") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.fillRect(120,120,100,100);
   }
   if(elem.id === "pencil") {
