@@ -77,7 +77,6 @@ var drawShape = (elem) => {
   if(elem.id === "gradient") {
     if (document.getElementById('gradient-tool').style = "display: none") {
       document.getElementById('gradient-tool').style = "display: block";
-      getGradient();
     }
   }
   if(elem.id === "square") {
