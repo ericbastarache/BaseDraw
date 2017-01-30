@@ -31,6 +31,10 @@ document.getElementById('toolbox').addEventListener('click', function (e) {
   drawShape(e.target);
 });
 
+document.getElementById('gradient').addEventListener('click', function (e) {
+  getGradient(e.target);
+})
+
 document.getElementById('clear-button').addEventListener('click', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById('download').style = "display: none;";
@@ -69,7 +73,41 @@ var changeColor = (elem) => {
   }
 }
 
+var getGradient = (elem) => {
+  if(typeof(elem) === "undefined") {
+    console.log("No value has been chosen yet");
+  }
+}
+
+/*var getGradient = () => {
+  var colorOne, colorTwo;
+  document.getElementById('color-1').addEventListener('click', () => {
+    colorOne = document.getElementById('color-1').value;
+  });
+
+  document.getElementById('color-2').addEventListener('click', () => {
+    colorOne = document.getElementById('color-1').value;
+  });
+
+  document.getElementById('color-1').addEventListener('change', () => {
+    colorOne = document.getElementById('color-1').value;
+    console.log(colorOne);
+  });
+  document.getElementById('color-2').addEventListener('change', () => {
+    colorTwo = document.getElementById('color-2').value;
+    console.log(colorTwo);
+  });
+  console.log(colorOne + " " + colorTwo);
+  document.getElementById('gradient').style.background = "linear-gradient(to right," + colorOne + ", " + colorTwo + ")";
+}*/
+
 var drawShape = (elem) => {
+  if(elem.id === "gradient") {
+    if (document.getElementById('gradient-tool').style = "display: none") {
+      document.getElementById('gradient-tool').style = "display: block";
+      getGradient();
+    }
+  }
   if(elem.id === "square") {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
@@ -128,7 +166,7 @@ var drawShape = (elem) => {
     [ 40, 190 ], [ 50, 125 ], [ 0, 85 ] ];
 
     var len = points.length;
-    
+
     ctx.beginPath();
     ctx.moveTo(points[0][0], points[0][1]);
 
