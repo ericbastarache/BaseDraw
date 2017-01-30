@@ -155,6 +155,7 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-
+    ctx.font = "48px serif";
+    ctx.fillText('Hello, my name is Hello World!', canvas.width/4, canvas.height/2);
   }
 }
