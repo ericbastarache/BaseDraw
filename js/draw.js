@@ -14,20 +14,20 @@ window.onload = () => {
   draw();
 }
 
-document.getElementById('colorChoice').addEventListener('click', function () {
+document.getElementById('colorChoice').addEventListener('click',  () => {
   ctx.fillStyle = document.getElementById('colorChoice').value;
 });
 
-document.getElementById('button-area').addEventListener('click', function(e) {
+document.getElementById('button-area').addEventListener('click', (e) => {
   changeColor(e.target);
 });
 
-document.getElementById('colorChoice').addEventListener('change', function () {
+document.getElementById('colorChoice').addEventListener('change', () => {
   ctx.fillStyle = document.getElementById('colorChoice').value;
   document.getElementById('choice').style.background = document.getElementById('colorChoice').value;
 });
 
-document.getElementById('toolbox').addEventListener('click', function (e) {
+document.getElementById('toolbox').addEventListener('click', (e) => {
   drawShape(e.target);
 });
 
