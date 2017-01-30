@@ -32,13 +32,13 @@ document.getElementById('toolbox').addEventListener('click', (e) => {
 });
 
 
-document.getElementById('clear-button').addEventListener('click', function () {
+document.getElementById('clear-button').addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById('download').style = "display: none;";
   document.getElementById('save-button').disabled = false;
 });
 
-document.getElementById('save-button').addEventListener('click', function (e) {
+document.getElementById('save-button').addEventListener('click', (e) => {
   document.getElementById('download').style = "display: block;";
   var dl = canvas.toDataURL('image/png', 1.0);
   var dlElem = document.createElement("a");
