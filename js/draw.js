@@ -1,12 +1,12 @@
-var canvas = document.getElementById('drawing-board');
+let canvas = document.getElementById('drawing-board');
 canvas.width = 1200;
 canvas.height = 850;
-var ctx = canvas.getContext('2d');
+let ctx = canvas.getContext('2d');
 
 window.onload = () => {
 
   //Apply the background color to the buttons
-  for(var i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
+  for(let i = 0; i < document.getElementsByClassName('btn-color').length; i++) {
     document.getElementsByClassName('btn-color')[i].style.background = document.getElementsByClassName('btn-color')[i].value;
   }
 
@@ -40,8 +40,8 @@ document.getElementById('clear-button').addEventListener('click', () => {
 
 document.getElementById('save-button').addEventListener('click', (e) => {
   document.getElementById('download').style = "display: block;";
-  var dl = canvas.toDataURL('image/png', 1.0);
-  var dlElem = document.createElement("a");
+  let dl = canvas.toDataURL('image/png', 1.0);
+  let dlElem = document.createElement("a");
   dlElem.innerHTML = "Click here to download your image";
   dlElem.download = "image.png";
   dlElem.href = dl;
@@ -102,7 +102,7 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    var circle = new Path2D();
+    let circle = new Path2D();
     circle.moveTo(125, 35);
     circle.arc(100, 35, 25, 0, 2 * Math.PI);
     ctx.fill(circle);
@@ -131,16 +131,16 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    var points = [ [ 0, 85 ], [ 75, 75 ], [ 100, 10 ], [ 125, 75 ],
+    let points = [ [ 0, 85 ], [ 75, 75 ], [ 100, 10 ], [ 125, 75 ],
     [ 200, 85 ], [ 150, 125 ], [ 160, 190 ], [ 100, 150 ],
     [ 40, 190 ], [ 50, 125 ], [ 0, 85 ] ];
 
-    var len = points.length;
+    let len = points.length;
 
     ctx.beginPath();
     ctx.moveTo(points[0][0], points[0][1]);
 
-    for (var i = 0; i < len; i++) {
+    for (let i = 0; i < len; i++) {
       ctx.lineTo(points[i][0], points[i][1]);
     }
 
