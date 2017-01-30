@@ -31,9 +31,6 @@ document.getElementById('toolbox').addEventListener('click', function (e) {
   drawShape(e.target);
 });
 
-document.getElementById('gradient').addEventListener('click', function (e) {
-  getGradient(e.target);
-})
 
 document.getElementById('clear-button').addEventListener('click', function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,33 +70,6 @@ var changeColor = (elem) => {
   }
 }
 
-var getGradient = (elem) => {
-  if(typeof(elem) === "undefined") {
-    console.log("No value has been chosen yet");
-  }
-}
-
-/*var getGradient = () => {
-  var colorOne, colorTwo;
-  document.getElementById('color-1').addEventListener('click', () => {
-    colorOne = document.getElementById('color-1').value;
-  });
-
-  document.getElementById('color-2').addEventListener('click', () => {
-    colorOne = document.getElementById('color-1').value;
-  });
-
-  document.getElementById('color-1').addEventListener('change', () => {
-    colorOne = document.getElementById('color-1').value;
-    console.log(colorOne);
-  });
-  document.getElementById('color-2').addEventListener('change', () => {
-    colorTwo = document.getElementById('color-2').value;
-    console.log(colorTwo);
-  });
-  console.log(colorOne + " " + colorTwo);
-  document.getElementById('gradient').style.background = "linear-gradient(to right," + colorOne + ", " + colorTwo + ")";
-}*/
 
 var drawShape = (elem) => {
   if(elem.id === "gradient") {
