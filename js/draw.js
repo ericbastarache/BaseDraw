@@ -35,7 +35,6 @@ document.getElementById('toolbox').addEventListener('click', (e) => {
 
 
 document.getElementById('clear-button').addEventListener('click', () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
   document.getElementById('download').style = "display: none;";
   document.getElementById('save-button').disabled = false;
   location.reload();
