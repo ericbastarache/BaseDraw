@@ -111,6 +111,9 @@ var drawShape = (elem) => {
     ctx.fill();
   }
   if(elem.id === "line") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
     ctx.fillRect(90,90,100,100);
   }
   if(elem.id === "star") {
@@ -123,5 +126,11 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: none") {
       document.getElementById('brush-tool').style = "display: block";
     }
+  }
+  if(elem.id === "text") {
+    if(document.getElementById('brush-tool').style = "display: block") {
+      document.getElementById('brush-tool').style = "display: none";
+    }
+    
   }
 }
