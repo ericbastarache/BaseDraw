@@ -3,6 +3,7 @@ canvas.width = 1200;
 canvas.height = 850;
 let ctx = canvas.getContext('2d');
 
+//Variables for download link and download element
 var dl, dlElem;
 
 window.onload = () => {
@@ -57,8 +58,6 @@ document.getElementById('save-button').addEventListener('click', (e) => {
 
 var draw = () => {
   ctx.fillStyle = document.getElementById('colorChoice').value;
-
-
 }
 
 var changeColor = (elem) => {
