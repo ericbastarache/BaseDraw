@@ -41,6 +41,14 @@ document.getElementById('clear-button').addEventListener('click', () => {
   location.reload();
 });
 
+var mousePos = (canvas, evt) => {
+  var rect = canvas.getBoundingClientRect();
+  return {
+    x: evt.clientX - rect.left,
+    y: ev.clientY - rect.top
+  }
+}
+
 document.getElementById('save-button').addEventListener('click', (e) => {
   document.getElementById('download').style = "display: block;";
   dl = canvas.toDataURL('image/png', 1.0);
@@ -58,6 +66,7 @@ document.getElementById('save-button').addEventListener('click', (e) => {
 
 var draw = () => {
   ctx.fillStyle = document.getElementById('colorChoice').value;
+
 }
 
 var changeColor = (elem) => {
@@ -82,7 +91,10 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    ctx.fillRect(0,0,100,100);
+    var pos = mousePos(e);
+    posX = pos.x;
+    posY = pos.y;
+    ctx.fillRect(posX, posY, 100,100);
   }
   if(elem.id === "callout") {
     if(document.getElementById('brush-tool').style = "display: block") {
