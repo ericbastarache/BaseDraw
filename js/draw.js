@@ -41,14 +41,6 @@ document.getElementById('clear-button').addEventListener('click', () => {
   location.reload();
 });
 
-var mousePos = (canvas, evt) => {
-  var rect = canvas.getBoundingClientRect();
-  return {
-    x: evt.clientX - rect.left,
-    y: ev.clientY - rect.top
-  }
-}
-
 document.getElementById('save-button').addEventListener('click', (e) => {
   document.getElementById('download').style = "display: block;";
   dl = canvas.toDataURL('image/png', 1.0);
