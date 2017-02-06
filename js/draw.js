@@ -91,10 +91,7 @@ var drawShape = (elem) => {
     if(document.getElementById('brush-tool').style = "display: block") {
       document.getElementById('brush-tool').style = "display: none";
     }
-    var pos = mousePos(e);
-    posX = pos.x;
-    posY = pos.y;
-    ctx.fillRect(posX, posY, 100,100);
+    ctx.fillRect(300, 300, 100,100);
   }
   if(elem.id === "callout") {
     if(document.getElementById('brush-tool').style = "display: block") {
