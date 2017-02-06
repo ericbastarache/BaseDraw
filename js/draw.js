@@ -72,7 +72,6 @@ var changeColor = (elem) => {
   }
 }
 
-
 var drawShape = (elem) => {
   if(elem.id === "gradient") {
     if (document.getElementById('gradient-tool').style = "display: none") {
